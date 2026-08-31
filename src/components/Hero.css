@@ -1,46 +1,63 @@
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 .hero {
   position: relative;
-  width: 100%;
-  min-height: 640px;
-  height: auto;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
   overflow: hidden;
   background: #03182D;
-  padding-top: 80px;
   background-image: url('/images/matoshri-hero.png');
   background-size: cover;
   background-position: center;
 }
 
+/* Dark overlay */
 .hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg,
       rgba(3, 24, 45, 0.85) 0%,
-      rgba(3, 24, 45, 0.7) 40%,
-      rgba(3, 24, 45, 0.4) 70%,
-      rgba(3, 24, 45, 0.2) 100%);
+      rgba(3, 24, 45, 0.70) 40%,
+      rgba(3, 24, 45, 0.40) 70%,
+      rgba(3, 24, 45, 0.20) 100%);
   z-index: 1;
 }
 
+/* Hero content */
 .hero__content {
   position: relative;
   z-index: 2;
+
   display: flex;
   align-items: center;
-  min-height: 560px;
+
+  min-height: calc(100vh - 80px);
+
+  width: 100%;
   max-width: 1280px;
+
   margin: 0 auto;
-  padding: 60px 60px;
+  padding: 0 60px;
+
+  box-sizing: border-box;
 }
 
+/* Hero text */
 .hero__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  max-width: 500px;
+
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  max-width: 500px;
+
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero__text--visible {
@@ -48,43 +65,62 @@
   transform: translateY(0);
 }
 
+/* Small script text */
 .hero__script {
   font-family: 'Caveat', cursive;
   font-size: 1.4rem;
   color: #F1C45A;
+
   margin-bottom: 12px;
   display: block;
 }
 
+/* Main title */
 .hero__title {
   font-family: 'Playfair Display', serif;
+
   font-size: 2.8rem;
   font-weight: 700;
+
   color: #ffffff;
+
   line-height: 1.15;
-  margin-bottom: 10px;
   letter-spacing: 1px;
+
+  margin: 0 0 10px;
 }
 
+/* Gold subtitle */
 .hero__gold-line {
   font-family: 'Playfair Display', serif;
+
   font-size: 1.3rem;
   font-weight: 700;
+
   color: #DFA52F;
+
   letter-spacing: 3px;
+
   margin-bottom: 24px;
   display: block;
 }
 
+/* Description */
 .hero__description {
   font-family: 'Inter', sans-serif;
+
   font-size: 0.95rem;
+
   color: rgba(255, 255, 255, 0.85);
+
   line-height: 1.6;
-  margin-bottom: 32px;
+
   max-width: 400px;
+
+  margin: 0 0 32px;
 }
 
+/* Buttons */
 .hero__actions {
   display: flex;
   flex-direction: column;
@@ -94,62 +130,95 @@
 .hero__btn {
   width: 180px;
   height: 48px;
+
   padding: 0;
+
   border-radius: 6px;
+
   font-size: 0.9rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  box-sizing: border-box;
 }
 
+/* Secondary button */
 .hero__btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   width: 180px;
   height: 48px;
+
   padding: 0;
+
   background: #03182D;
   color: #ffffff;
+
   font-weight: 600;
   font-size: 0.9rem;
+
   border: 2px solid #DFA52F;
   border-radius: 6px;
+
   transition: all 0.3s ease;
+
+  box-sizing: border-box;
 }
 
 .hero__btn-secondary:hover {
   background: #DFA52F;
   color: #03182D;
+
   transform: translateY(-2px);
 }
 
+/* =========================================================
+   CAROUSEL INDICATORS
+   ========================================================= */
+
 .hero__carousel {
   position: absolute;
+
   bottom: 32px;
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
   align-items: center;
+
   gap: 10px;
+
   z-index: 3;
 }
 
 .hero__carousel-dot {
   width: 10px;
   height: 10px;
+
   border-radius: 50%;
+
   background: #ffffff;
+
   opacity: 0.7;
+
   cursor: pointer;
+
   transition: all 0.3s ease;
 }
 
 .hero__carousel-dot--active {
   width: 32px;
   height: 10px;
+
   border-radius: 5px;
+
   background: #DFA52F;
+
   opacity: 1;
 }
 
@@ -157,19 +226,18 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-
-/* =========================
+/* =========================================================
    LARGE DESKTOP
-========================= */
+   ========================================================= */
 
 @media (min-width: 1200px) {
   .hero {
-    min-height: 640px;
+    min-height: calc(100vh - 80px);
   }
 
   .hero__content {
-    min-height: 560px;
-    padding: 60px 80px;
+    min-height: calc(100vh - 80px);
+    padding: 0 80px;
   }
 
   .hero__title {
@@ -177,19 +245,18 @@
   }
 }
 
-
-/* =========================
+/* =========================================================
    TABLET / SMALL DESKTOP
-========================= */
+   ========================================================= */
 
 @media (max-width: 1024px) {
   .hero {
-    min-height: 600px;
+    min-height: calc(100vh - 80px);
   }
 
   .hero__content {
-    min-height: 520px;
-    padding: 40px;
+    min-height: calc(100vh - 80px);
+    padding: 0 40px;
   }
 
   .hero__title {
@@ -197,27 +264,34 @@
   }
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   MOBILE + TABLET
+   ========================================================= */
 
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding-top: 70px;
+
+    /* Navbar is still accounted for */
+    margin-top: 70px;
+
+    padding-top: 0;
+
     background-position: 75% center;
   }
 
   .hero__content {
     min-height: auto;
+
     padding: 50px 24px 90px;
+
     align-items: center;
   }
 
   .hero__text {
     text-align: left;
     align-items: flex-start;
+
     max-width: 55%;
   }
 
@@ -236,6 +310,7 @@
   .hero__btn,
   .hero__btn-secondary {
     width: auto;
+
     min-width: 160px;
     max-width: 200px;
   }
@@ -245,14 +320,16 @@
   }
 }
 
-
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+   ========================================================= */
 
 @media (max-width: 430px) {
   .hero {
-    padding-top: 60px;
+    margin-top: 60px;
+
+    padding-top: 0;
+
     background-position: 70% center;
   }
 
@@ -263,6 +340,7 @@
   .hero__text {
     text-align: left;
     align-items: flex-start;
+
     max-width: 58%;
   }
 
@@ -278,13 +356,17 @@
 
   .hero__gold-line {
     font-size: 0.9rem;
+
     letter-spacing: 2px;
+
     margin-bottom: 14px;
   }
 
   .hero__description {
     font-size: 0.78rem;
+
     margin-bottom: 20px;
+
     line-height: 1.5;
   }
 
@@ -292,7 +374,9 @@
   .hero__btn-secondary {
     min-width: 140px;
     max-width: 180px;
+
     height: 42px;
+
     font-size: 0.82rem;
   }
 
@@ -312,13 +396,14 @@
   }
 }
 
-
-/* =========================
+/* =========================================================
    VERY SMALL MOBILE
-========================= */
+   ========================================================= */
 
 @media (max-width: 375px) {
   .hero {
+    margin-top: 60px;
+
     background-position: 68% center;
   }
 
@@ -327,9 +412,10 @@
   }
 
   .hero__text {
+    max-width: 60%;
+
     text-align: left;
     align-items: flex-start;
-    max-width: 60%;
   }
 
   .hero__script {
@@ -346,6 +432,7 @@
 
   .hero__description {
     font-size: 0.75rem;
+
     margin-bottom: 16px;
   }
 
@@ -353,7 +440,9 @@
   .hero__btn-secondary {
     min-width: 130px;
     max-width: 160px;
+
     height: 40px;
+
     font-size: 0.78rem;
   }
 }
