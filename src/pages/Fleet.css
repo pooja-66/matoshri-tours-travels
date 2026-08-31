@@ -1,0 +1,20 @@
+@media (max-width: 480px) {
+  .fleet-card__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fleet-card__image {
+    height: auto !important;
+    min-height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .fleet-card__image img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .fleet-card__content {
+    padding: 24px !important;
+  }
+}

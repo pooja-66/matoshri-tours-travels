@@ -1,0 +1,132 @@
+.why-choose {
+  background: linear-gradient(135deg, #0B1F33 0%, #12395B 100%);
+  padding: 60px 0;
+  position: relative;
+}
+
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4A84F, transparent);
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.why-choose__item {
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.why-choose__item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-choose__item:hover {
+  background: rgba(212, 168, 79, 0.08);
+  transform: translateY(-4px);
+}
+
+.why-choose__item--visible:hover {
+  transform: translateY(-4px);
+}
+
+.why-choose__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  background: rgba(212, 168, 79, 0.1);
+  border: 1px solid rgba(212, 168, 79, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4A84F;
+}
+
+.why-choose__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.why-choose__desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .why-choose__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose {
+    padding: 40px 0;
+  }
+
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-choose__item {
+    padding: 20px 12px;
+  }
+
+  .why-choose__icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .why-choose__title {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .why-choose__item {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .why-choose__icon {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .why-choose__title {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .why-choose__desc {
+    font-size: 0.8rem;
+  }
+}

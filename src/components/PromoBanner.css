@@ -1,0 +1,271 @@
+.promo-banner {
+  background: #03182D;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center right, rgba(221, 165, 47, 0.08) 0%, transparent 60%);
+}
+
+.promo-banner__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-banner__content {
+  padding-right: 20px;
+}
+
+.promo-banner__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #DFA52F;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.promo-banner__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.promo-banner__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.promo-banner__features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.promo-banner__features svg {
+  color: #DFA52F;
+  flex-shrink: 0;
+}
+
+.promo-banner__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-banner__image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.promo-banner__cta {
+  margin-top: 32px;
+}
+
+.promo-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #DFA52F 0%, #F1C45A 100%);
+  color: #03182D;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(221, 165, 47, 0.3);
+}
+
+.promo-banner__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(221, 165, 47, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .promo-banner__grid {
+    gap: 40px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-banner {
+    padding: 50px 0;
+  }
+
+  .promo-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 16px;
+    align-items: center;
+  }
+
+  .promo-banner__content {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .promo-banner__title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .promo-banner__subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .promo-banner__features {
+    gap: 8px;
+  }
+
+  .promo-banner__features li {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .promo-banner__features svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .promo-banner__image {
+    order: 0;
+    justify-content: flex-end;
+  }
+
+  .promo-banner__image img {
+    max-width: 100%;
+    width: auto;
+    max-height: 180px;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .promo-banner__cta {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .promo-banner__btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .promo-banner {
+    padding: 40px 0;
+  }
+
+  .promo-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .promo-banner__title {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .promo-banner__subtitle {
+    font-size: 0.78rem;
+    margin-bottom: 12px;
+  }
+
+  .promo-banner__features {
+    gap: 6px;
+  }
+
+  .promo-banner__features li {
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+
+  .promo-banner__features svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .promo-banner__image img {
+    max-height: 140px;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .promo-banner__cta {
+    margin-top: 14px;
+  }
+
+  .promo-banner__btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .promo-banner__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .promo-banner__title {
+    font-size: 1.1rem;
+  }
+
+  .promo-banner__subtitle {
+    font-size: 0.72rem;
+  }
+
+  .promo-banner__features li {
+    font-size: 0.65rem;
+  }
+
+  .promo-banner__image img {
+    max-height: 120px;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .promo-banner__btn {
+    padding: 8px 14px;
+    font-size: 0.72rem;
+  }
+}

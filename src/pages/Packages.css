@@ -1,0 +1,20 @@
+@media (max-width: 480px) {
+  .packages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .package-card__image {
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .package-card__image img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .package-card > div:last-child {
+    padding: 20px !important;
+  }
+}

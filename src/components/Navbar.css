@@ -1,0 +1,281 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #031A32;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: #00152B;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #DFA52F 0%, #F0C15A 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00152B;
+  flex-shrink: 0;
+}
+
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.navbar__tagline {
+  font-size: 0.7rem;
+  color: #DFA52F;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.navbar__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navbar__icon-btn--call {
+  background: #031A32;
+  border: 1px solid #DFA52F;
+  color: #ffffff;
+}
+
+.navbar__icon-btn--call:hover {
+  background: #DFA52F;
+  color: #00152B;
+}
+
+.navbar__icon-btn--whatsapp {
+  background: #DFA52F;
+  border: 1px solid #DFA52F;
+  color: #00152B;
+}
+
+.navbar__icon-btn--whatsapp:hover {
+  background: #F0C15A;
+}
+
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1001;
+  width: 32px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar__hamburger--open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__hamburger--open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  background: #031A32;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar__overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar__mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.navbar__link {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: #DFA52F;
+  background: rgba(212, 168, 79, 0.1);
+}
+
+.navbar__link--active {
+  color: #DFA52F;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar__container {
+    padding: 0 16px;
+  }
+
+  .navbar__brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar__tagline {
+    font-size: 0.65rem;
+  }
+
+  .navbar__icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar__container {
+    padding: 0 12px;
+  }
+
+  .navbar__logo {
+    gap: 8px;
+  }
+
+  .navbar__logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .navbar__logo-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar__brand {
+    font-size: 0.95rem;
+  }
+
+  .navbar__tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+
+  .navbar__controls {
+    gap: 8px;
+  }
+
+  .navbar__icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+
+  .navbar__icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navbar__hamburger {
+    padding: 6px;
+  }
+
+  .navbar__hamburger span {
+    width: 22px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar {
+    height: 56px;
+  }
+
+  .navbar__brand {
+    font-size: 0.85rem;
+  }
+
+  .navbar__tagline {
+    font-size: 0.5rem;
+  }
+
+  .navbar__icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
