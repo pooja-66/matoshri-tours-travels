@@ -30,11 +30,23 @@ export default function FeaturedUrbania() {
     <section className="featured-urbania section" ref={sectionRef}>
       <div className="container">
         <div className="featured-urbania__content">
-          <div className={`featured-urbania__image ${isVisible ? 'featured-urbania__image--visible' : ''}`}>
-            <img
-              src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop"
-              alt="Black Force Urbania premium van"
-            />
+          <div className="featured-urbania__image">
+            <div className="urbania-showcase">
+              <div className="urbania-frame urbania-frame--black">
+                <img
+                  src="/images/black-urbania-side.png"
+                  alt="Black Force Urbania"
+                  className="urbania-vehicle"
+                />
+              </div>
+              <div className="urbania-frame urbania-frame--white">
+                <img
+                  src="/images/white-urbania-side.png"
+                  alt="White Force Urbania"
+                  className="urbania-vehicle"
+                />
+              </div>
+            </div>
             <div className="featured-urbania__badge">Most Popular</div>
           </div>
           <div className={`featured-urbania__info ${isVisible ? 'featured-urbania__info--visible' : ''}`}>

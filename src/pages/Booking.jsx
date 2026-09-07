@@ -10,7 +10,7 @@ export default function Booking() {
 
   return (
     <>
-      <div className="page-header">
+      <div className="page-header booking-page-header">
         <div className="container">
           <h1>Online Booking</h1>
           <p>Choose your preferred vehicle and book directly via WhatsApp for instant confirmation.</p>
@@ -31,11 +31,11 @@ export default function Booking() {
                   border: '1px solid #E5E7EB',
                 }}
               >
-                <div className="booking-card__image" style={{ height: '220px', overflow: 'hidden' }}>
+                <div className="booking-card__image" style={{ height: '220px', overflow: 'hidden', background: 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)' }}>
                   <img
                     src={vehicle.image}
                     alt={vehicle.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '16px' }}
                   />
                 </div>
                 <div style={{ padding: '24px' }}>

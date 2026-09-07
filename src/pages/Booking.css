@@ -1,3 +1,14 @@
+.page-header.booking-page-header {
+  background: #03182D;
+  padding: 80px 0 50px;
+}
+
+@media (max-width: 768px) {
+  .page-header.booking-page-header {
+    padding: 60px 0 40px;
+  }
+}
+
 @media (max-width: 480px) {
   .booking-grid {
     grid-template-columns: 1fr !important;
@@ -11,7 +22,7 @@
 
   .booking-card__image img {
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
   }
 
   .booking-card > div:last-child {

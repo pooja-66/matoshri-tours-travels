@@ -1,6 +1,59 @@
+/* =========================================================
+   FLEET PAGE — Responsive Vehicle Cards
+   ========================================================= */
+
+.page-header.fleet-page-header {
+  background: #03182D;
+  padding: 80px 0 50px;
+}
+
+@media (max-width: 768px) {
+  .page-header.fleet-page-header {
+    padding: 60px 0 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fleet-card__grid {
+    gap: 28px !important;
+  }
+
+  .fleet-card__content {
+    padding: 32px !important;
+  }
+
+  .fleet-card__image {
+    min-height: 260px !important;
+  }
+
+  .fleet-image--contain {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fleet-card__grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+  }
+
+  .fleet-card__content {
+    padding: 24px !important;
+  }
+
+  .fleet-card__image {
+    min-height: 220px !important;
+  }
+
+  .fleet-image--contain {
+    padding: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .fleet-card__grid {
     grid-template-columns: 1fr !important;
+    gap: 0 !important;
   }
 
   .fleet-card__image {
@@ -9,12 +62,36 @@
     aspect-ratio: 4 / 3 !important;
   }
 
-  .fleet-card__image img {
+  .fleet-card__image-img {
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .fleet-image--contain {
+    padding: 16px;
   }
 
   .fleet-card__content {
     padding: 24px !important;
   }
+}
+
+.fleet-card__image {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.fleet-card__image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  padding: 24px;
+}
+
+.fleet-image--contain {
+  object-fit: contain;
+  background: transparent;
+  padding: 24px;
 }

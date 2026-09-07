@@ -5,7 +5,7 @@ import './Fleet.css';
 export default function Fleet() {
   return (
     <>
-      <div className="page-header">
+      <div className="page-header fleet-page-header">
         <div className="container">
           <h1>Our Fleet</h1>
           <p>Explore our premium fleet of Force Urbania vehicles, maintained to the highest standards.</p>
@@ -26,12 +26,12 @@ export default function Fleet() {
                 }}
               >
                  <div className="fleet-card__grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'stretch' }}>
-                   <div className="fleet-card__image" style={{ height: '100%', minHeight: '300px' }}>
-                     <img
-                       src={vehicle.image}
-                       alt={vehicle.name}
-                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                     />
+                    <div className="fleet-card__image" style={{ height: '320px' }}>
+                       <img
+                         src={vehicle.image}
+                         alt={vehicle.name}
+                         className={`fleet-card__image-img${vehicle.imageClassName ? ` ${vehicle.imageClassName}` : ''}`}
+                       />
                    </div>
                    <div className="fleet-card__content" style={{ padding: '40px' }}>
                     <h2 style={{ fontSize: '1.75rem', color: '#0B1F33', marginBottom: '16px' }}>{vehicle.name}</h2>

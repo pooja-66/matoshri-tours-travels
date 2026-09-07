@@ -1,7 +1,8 @@
 .featured-urbania {
   background: linear-gradient(135deg, #0B1F33 0%, #12395B 100%);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  padding: 60px 0;
 }
 
 .featured-urbania::before {
@@ -11,58 +12,134 @@
   right: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(212, 168, 79, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle,
+      rgba(212, 168, 79, 0.08) 0%,
+      transparent 70%);
   border-radius: 50%;
 }
+
+/* ================================
+   MAIN SECTION LAYOUT
+   ================================ */
 
 .featured-urbania__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
 }
 
+/* ================================
+   URBANIA IMAGE AREA
+   ================================ */
+
 .featured-urbania__image {
   position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.featured-urbania__image--visible {
+.urbania-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.urbania-frame {
+  background: #ffffff;
+  border: 2px solid #D4A84F;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.urbania-frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.urbania-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.urbania-frame--black {
+  align-self: flex-end;
+  width: 72%;
+  margin-bottom: -28px;
+}
+
+.urbania-frame--white {
+  align-self: flex-start;
+  width: 72%;
+  margin-top: -28px;
+}
+
+/* ================================
+   POPULAR BADGE
+   ================================ */
+
+.featured-urbania__badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+
+  background: linear-gradient(135deg,
+      #D4A84F 0%,
+      #E8C97A 100%);
+
+  color: #0B1F33;
+
+  padding: 8px 16px;
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(212, 168, 79, 0.25);
+
+  z-index: 10;
+}
+
+/* ================================
+   TEXT AREA
+   ================================ */
+
+.featured-urbania__info {
+  opacity: 0;
+  transform: translateX(30px);
+
+  transition:
+    all 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: 0.15s;
+}
+
+.featured-urbania__info--visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.featured-urbania__image img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.featured-urbania__badge {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: linear-gradient(135deg, #D4A84F 0%, #E8C97A 100%);
-  color: #0B1F33;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
 .featured-urbania__label {
   display: inline-block;
+
   background: rgba(212, 168, 79, 0.15);
   border: 1px solid rgba(212, 168, 79, 0.3);
+
   color: #D4A84F;
+
   padding: 6px 16px;
   border-radius: 50px;
+
   font-size: 0.8rem;
   font-weight: 600;
+
   margin-bottom: 16px;
 }
 
@@ -75,24 +152,37 @@
 .featured-urbania__description {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
+
   line-height: 1.7;
+
   margin-bottom: 28px;
 }
+
+/* ================================
+   VEHICLE SPECS
+   ================================ */
 
 .featured-urbania__specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 16px;
+
   margin-bottom: 24px;
 }
 
 .featured-urbania__spec {
   display: flex;
   align-items: center;
+
   gap: 12px;
+
   padding: 12px 16px;
+
   background: rgba(255, 255, 255, 0.05);
+
   border: 1px solid rgba(255, 255, 255, 0.1);
+
   border-radius: 10px;
 }
 
@@ -103,67 +193,154 @@
 
 .featured-urbania__spec-value {
   display: block;
+
   font-size: 0.9rem;
   font-weight: 600;
+
   color: #ffffff;
 }
 
 .featured-urbania__spec-label {
   display: block;
+
   font-size: 0.75rem;
+
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* ================================
+   FEATURES
+   ================================ */
 
 .featured-urbania__features {
   display: flex;
   flex-wrap: wrap;
+
   gap: 8px;
+
   margin-bottom: 28px;
 }
 
 .featured-urbania__feature {
   background: rgba(212, 168, 79, 0.1);
+
   border: 1px solid rgba(212, 168, 79, 0.2);
+
   color: #D4A84F;
+
   padding: 6px 14px;
+
   border-radius: 50px;
+
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+/* ================================
+   CTA
+   ================================ */
 
 .featured-urbania__cta {
   display: inline-flex;
 }
 
-.featured-urbania__info {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: 0.15s;
-}
-
-.featured-urbania__info--visible {
-  opacity: 1;
-  transform: translateX(0);
-}
+/* ================================
+   TABLET
+   ================================ */
 
 @media (max-width: 1024px) {
+
   .featured-urbania__content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
-  .featured-urbania__title {
-    font-size: 2rem;
+  .urbania-frame--black {
+    width: 75%;
+    margin-bottom: -24px;
+  }
+
+  .urbania-frame--white {
+    width: 75%;
+    margin-top: -24px;
   }
 }
 
+/* ================================
+   MOBILE
+   ================================ */
+
 @media (max-width: 768px) {
+
+  .featured-urbania {
+    padding: 40px 0;
+  }
+
+  .featured-urbania__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .urbania-frame--black {
+    width: 60%;
+    margin-bottom: -22px;
+  }
+
+  .urbania-frame--white {
+    width: 60%;
+    margin-top: -22px;
+  }
+
   .featured-urbania__specs {
     grid-template-columns: 1fr;
   }
 
   .featured-urbania__title {
     font-size: 1.75rem;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+   ================================ */
+
+@media (max-width: 480px) {
+  .featured-urbania {
+    padding: 32px 0;
+  }
+
+  .urbania-frame--black {
+    width: 65%;
+    margin-bottom: -18px;
+  }
+
+  .urbania-frame--white {
+    width: 65%;
+    margin-top: -18px;
+  }
+
+  .urbania-frame {
+    padding: 8px;
+    border-width: 1.5px;
+  }
+
+  .featured-urbania__badge {
+    top: -10px;
+    right: -10px;
+
+    font-size: 0.75rem;
+
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .urbania-frame--black {
+    width: 70%;
+    margin-bottom: -15px;
+  }
+
+  .urbania-frame--white {
+    width: 70%;
+    margin-top: -15px;
   }
 }

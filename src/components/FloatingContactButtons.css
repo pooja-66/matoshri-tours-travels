@@ -1,0 +1,145 @@
+.floating-contact {
+  position: fixed;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floating-contact--left {
+  left: 20px;
+  bottom: 24px;
+}
+
+.floating-contact--right {
+  right: 20px;
+  bottom: 24px;
+}
+
+.floating-contact__btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #ffffff;
+}
+
+.floating-contact__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.floating-contact__btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35), 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.floating-contact__btn--call {
+  background: #DFA52F;
+}
+
+.floating-contact__btn--call:hover {
+  background: #c99936;
+}
+
+.floating-contact__btn--whatsapp {
+  background: #25D366;
+}
+
+.floating-contact__btn--whatsapp:hover {
+  background: #1fb855;
+}
+
+.floating-contact__popup {
+  position: absolute;
+  bottom: 60px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  min-width: 220px;
+  animation: floatFadeIn 0.2s ease;
+}
+
+.floating-contact--left .floating-contact__popup {
+  left: 0;
+}
+
+.floating-contact--right .floating-contact__popup {
+  right: 0;
+}
+
+.floating-contact__popup-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #0B1F33;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.floating-contact__popup-item:last-child {
+  border-bottom: none;
+}
+
+.floating-contact__popup-item:hover {
+  background: #F8F7F3;
+}
+
+.floating-contact__popup-item svg {
+  flex-shrink: 0;
+  color: #DFA52F;
+}
+
+@keyframes floatFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 430px) {
+  .floating-contact--left {
+    left: 12px;
+    bottom: 16px;
+  }
+
+  .floating-contact--right {
+    right: 12px;
+    bottom: 16px;
+  }
+
+  .floating-contact__btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .floating-contact__btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .floating-contact__popup {
+    min-width: 190px;
+    bottom: 54px;
+  }
+
+  .floating-contact__popup-item {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+}

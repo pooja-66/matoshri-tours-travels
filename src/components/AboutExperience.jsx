@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import FleetShowcase from './FleetShowcase';
 import './AboutExperience.css';
 
 export default function AboutExperience() {
@@ -27,47 +28,8 @@ export default function AboutExperience() {
     <section className="about-experience" ref={sectionRef}>
       <div className="container">
         <div className="about-experience__grid">
-          <div className={`about-experience__visual ${isVisible ? 'is-visible' : ''}`}>
-            <div className="about-visual__composition">
-              <div className="about-visual__gold-frame">
-                <div className="about-visual__corner about-visual__corner--tl"></div>
-                <div className="about-visual__corner about-visual__corner--tr"></div>
-                <div className="about-visual__corner about-visual__corner--bl"></div>
-                <div className="about-visual__corner about-visual__corner--br"></div>
-                <div className="about-visual__line about-visual__line--top"></div>
-                <div className="about-visual__line about-visual__line--bottom"></div>
-              </div>
-              <div className="about-visual__gold-shape"></div>
-              <div className="about-visual__dots">
-                <span></span><span></span><span></span>
-                <span></span><span></span><span></span>
-                <span></span><span></span><span></span>
-              </div>
-              <div className="about-visual__img about-visual__img--main">
-                <img
-                  src="/images/black-urbania.png"
-                  alt="Black Force Urbania premium van"
-                  loading="lazy"
-                />
-              </div>
-              <div className="about-visual__img about-visual__img--secondary">
-                <img
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop"
-                  alt="Scenic mountain road"
-                  loading="lazy"
-                />
-              </div>
-              <div className="about-visual__card">
-                <div className="about-visual__card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DFA52F" strokeWidth="2">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <h3 className="about-visual__card-title">Premium</h3>
-                <h3 className="about-visual__card-title">Group Travel</h3>
-                <p className="about-visual__card-subtitle">Comfort • Safety • Reliability</p>
-              </div>
-            </div>
+          <div className="about-experience__visual">
+            <FleetShowcase />
           </div>
 
           <div className={`about-experience__content ${isVisible ? 'is-visible' : ''}`}>

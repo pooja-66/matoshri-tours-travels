@@ -1,0 +1,552 @@
+/* =========================================================
+   PUNE TO MAHABALESHWAR PAGE
+   ========================================================= */
+
+.ptm-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #03182D 0%, #061F3A 100%);
+  padding: 120px 0 80px;
+}
+
+
+.ptm-hero__content {
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.ptm-hero__script {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #DFA52F;
+  margin-bottom: 16px;
+  animation: ptmFadeInDown 0.8s ease-out;
+}
+
+.ptm-hero__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  animation: ptmFadeInUp 0.8s ease-out 0.15s both;
+}
+
+.ptm-hero__description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  animation: ptmFadeInUp 0.8s ease-out 0.3s both;
+}
+
+.ptm-hero__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: ptmFadeInUp 0.8s ease-out 0.45s both;
+}
+
+.ptm-hero__btn {
+  padding: 14px 36px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ptm-hero {
+    padding: 100px 0 60px;
+  }
+
+  .ptm-hero__title {
+    font-size: 2.2rem;
+  }
+
+  .ptm-hero__description {
+    font-size: 1rem;
+  }
+
+  .ptm-hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ptm-hero__btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.ptm-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #03182D;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ptm-section-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #6B7280;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ptm-section--alt {
+  background: #F8F7F3;
+}
+
+@media (max-width: 768px) {
+  .ptm-section-title {
+    font-size: 1.7rem;
+  }
+
+  .ptm-section-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.ptm-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.ptm-feature-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ptm-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(3, 24, 45, 0.08);
+  border-color: rgba(223, 165, 47, 0.3);
+}
+
+.ptm-feature-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(223, 165, 47, 0.1);
+  color: #DFA52F;
+  margin-bottom: 16px;
+}
+
+.ptm-feature-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #03182D;
+  margin-bottom: 10px;
+}
+
+.ptm-feature-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .ptm-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ptm-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   VEHICLES
+   ========================================================= */
+
+.ptm-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.ptm-vehicle-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ptm-vehicle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(3, 24, 45, 0.1);
+}
+
+.ptm-vehicle-card__image {
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.ptm-vehicle-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+}
+
+.ptm-vehicle-card__body {
+  padding: 24px;
+}
+
+.ptm-vehicle-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #03182D;
+  margin-bottom: 6px;
+}
+
+.ptm-vehicle-card__seats {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #DFA52F;
+  margin-bottom: 12px;
+}
+
+.ptm-vehicle-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ptm-vehicle-card__btn {
+  width: 100%;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .ptm-vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ptm-vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   TRAVEL OPTIONS
+   ========================================================= */
+
+.ptm-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.ptm-option-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ptm-option-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(3, 24, 45, 0.08);
+  border-color: rgba(223, 165, 47, 0.3);
+}
+
+.ptm-option-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(223, 165, 47, 0.1);
+  color: #DFA52F;
+  margin-bottom: 20px;
+}
+
+.ptm-option-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #03182D;
+  margin-bottom: 12px;
+}
+
+.ptm-option-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.ptm-option-card__btn {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .ptm-options-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================================================
+   ROUTE
+   ========================================================= */
+
+.ptm-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.ptm-route__city {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ptm-route__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #DFA52F;
+  box-shadow: 0 0 0 4px rgba(223, 165, 47, 0.2);
+}
+
+.ptm-route__dot--dest {
+  background: #03182D;
+  box-shadow: 0 0 0 4px rgba(3, 24, 45, 0.2);
+}
+
+.ptm-route__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #03182D;
+}
+
+.ptm-route__line {
+  color: #DFA52F;
+  animation: ptmBounce 2s ease-in-out infinite;
+}
+
+.ptm-route__note {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .ptm-route {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ptm-route__line {
+    transform: rotate(90deg);
+  }
+}
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.ptm-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ptm-highlight-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ptm-highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(3, 24, 45, 0.08);
+}
+
+.ptm-highlight-card__image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.ptm-highlight-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ptm-highlight-card:hover .ptm-highlight-card__image img {
+  transform: scale(1.04);
+}
+
+.ptm-highlight-card__body {
+  padding: 20px;
+}
+
+.ptm-highlight-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #03182D;
+  margin-bottom: 8px;
+}
+
+.ptm-highlight-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .ptm-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ptm-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.ptm-cta-section {
+  background: linear-gradient(135deg, #03182D 0%, #061F3A 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.ptm-cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.ptm-cta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+}
+
+.ptm-cta-btn {
+  padding: 14px 36px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ptm-cta-title {
+    font-size: 1.6rem;
+  }
+
+  .ptm-cta-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes ptmFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ptmFadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ptmBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}

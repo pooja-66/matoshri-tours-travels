@@ -1,0 +1,391 @@
+.fleet-showcase {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fleet-showcase--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.fleet-showcase__inner {
+  width: 100%;
+}
+
+.fleet-showcase__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.fleet-showcase__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #03182D;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.fleet-showcase__stage {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  cursor: grab;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fleet-showcase__stage:active {
+  cursor: grabbing;
+}
+
+.fleet-showcase__glow {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  left: 50%;
+  top: 50%;
+  transform: translate(
+    calc(-50% + var(--mx-glow, 0px)),
+    calc(-50% + var(--my-glow, 0px))
+  );
+  background: radial-gradient(
+    circle,
+    rgba(212, 168, 79, 0.12) 0%,
+    transparent 65%
+  );
+  filter: blur(50px);
+  z-index: 1;
+  transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.fleet-showcase__vehicles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.fleet-showcase__vehicle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 92%;
+  max-width: 640px;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+  will-change: transform, opacity;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fleet-showcase__vehicle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.fleet-showcase__vehicle--active {
+  transform: translate(
+      calc(-50% + var(--mx, 0px)),
+      calc(-50% + var(--my, 0px))
+    )
+    scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.fleet-showcase__vehicle--active:hover {
+  transform: translate(
+      calc(-50% + var(--mx, 0px)),
+      calc(-50% + var(--my, 0px))
+    )
+    scale(1.015);
+}
+
+.fleet-showcase__vehicle--prev {
+  width: 26%;
+  max-width: 190px;
+  transform: translate(-170%, -50%) scale(0.70);
+  opacity: 0.30;
+  z-index: 2;
+}
+
+.fleet-showcase__vehicle--next {
+  width: 26%;
+  max-width: 190px;
+  transform: translate(70%, -50%) scale(0.70);
+  opacity: 0.30;
+  z-index: 2;
+}
+
+.fleet-showcase__vehicle--hidden {
+  transform: translate(-50%, -50%) scale(0.97);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fleet-showcase__vehicle-label {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6B7280;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.fleet-showcase__vehicle:hover .fleet-showcase__vehicle-label {
+  opacity: 1;
+}
+
+.fleet-showcase__shadow {
+  position: absolute;
+  width: 60%;
+  max-width: 500px;
+  height: 18px;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse,
+    rgba(3, 24, 45, 0.20) 0%,
+    transparent 70%
+  );
+  filter: blur(10px);
+  z-index: 0;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.fleet-showcase__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.fleet-showcase__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #E5E7EB;
+  background: #ffffff;
+  color: #03182D;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  line-height: 1;
+}
+
+.fleet-showcase__btn:hover {
+  border-color: #D4A84F;
+  color: #D4A84F;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(212, 168, 79, 0.15);
+}
+
+.fleet-showcase__btn:focus-visible {
+  outline: 2px solid #D4A84F;
+  outline-offset: 2px;
+}
+
+.fleet-showcase__btn:active {
+  transform: scale(0.98);
+}
+
+.fleet-showcase__info {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.fleet-showcase__counter {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #6B7280;
+  letter-spacing: 0.5px;
+}
+
+.fleet-showcase__counter-current {
+  font-weight: 600;
+  color: #03182D;
+  font-size: 1rem;
+}
+
+.fleet-showcase__counter-sep {
+  margin: 0 2px;
+  color: #9CA3AF;
+}
+
+.fleet-showcase__counter-total {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.fleet-showcase__progress {
+  width: 200px;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 2px;
+  margin: 0 auto 14px;
+  overflow: hidden;
+}
+
+.fleet-showcase__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #D4A84F, #F1C45A);
+  border-radius: 2px;
+}
+
+.fleet-showcase__details {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fleet-showcase--visible .fleet-showcase__details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fleet-showcase__vehicle-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #03182D;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.fleet-showcase__vehicle-category {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .fleet-showcase__stage {
+    height: 420px;
+  }
+
+  .fleet-showcase__title {
+    font-size: 1.75rem;
+  }
+
+  .fleet-showcase__vehicle--prev,
+  .fleet-showcase__vehicle--next {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .fleet-showcase__stage {
+    height: 360px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .fleet-showcase__vehicle {
+    width: 86%;
+    max-width: 380px;
+  }
+
+  .fleet-showcase__shadow {
+    width: 65%;
+    bottom: 10%;
+  }
+
+  .fleet-showcase__controls {
+    margin-top: 12px;
+  }
+
+  .fleet-showcase__title {
+    font-size: 1.6rem;
+  }
+
+  .fleet-showcase__progress {
+    width: 180px;
+  }
+}
+
+@media (max-width: 430px) {
+  .fleet-showcase__stage {
+    height: 300px;
+    max-width: 340px;
+  }
+
+  .fleet-showcase__title {
+    font-size: 1.4rem;
+  }
+
+  .fleet-showcase__vehicle {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .fleet-showcase__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .fleet-showcase__vehicle-name {
+    font-size: 1.1rem;
+  }
+
+  .fleet-showcase__progress {
+    width: 160px;
+  }
+
+  .fleet-showcase__counter {
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fleet-showcase,
+  .fleet-showcase__vehicle,
+  .fleet-showcase__glow,
+  .fleet-showcase__shadow,
+  .fleet-showcase__details,
+  .fleet-showcase__progress-fill {
+    transition: opacity 0.3s ease !important;
+  }
+
+  .fleet-showcase__vehicle--active {
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+
+  .fleet-showcase__vehicle--prev {
+    transform: translate(-130%, -50%) scale(0.75) !important;
+  }
+
+  .fleet-showcase__vehicle--next {
+    transform: translate(30%, -50%) scale(0.75) !important;
+  }
+}

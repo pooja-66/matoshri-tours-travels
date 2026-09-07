@@ -1,8 +1,8 @@
 .promo-banner {
   background: #03182D;
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .promo-banner::before {
@@ -15,7 +15,7 @@
 .promo-banner__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 48px;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
@@ -72,16 +72,54 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
-.promo-banner__image img {
+.urbania-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
-  max-width: 450px;
-  height: auto;
+  gap: 24px;
+}
+
+.urbania-frame {
+  background: #ffffff;
+  border: 2px solid #D4A84F;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  box-sizing: border-box;
+}
+
+.urbania-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+}
+
+.urbania-frame img {
   display: block;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.urbania-frame--black {
+  align-self: flex-end;
+  margin-bottom: 24px;
+}
+
+.urbania-frame--white {
+  align-self: flex-start;
+  margin-top: 24px;
 }
 
 .promo-banner__cta {
@@ -110,22 +148,43 @@
 
 @media (max-width: 1024px) {
   .promo-banner__grid {
-    gap: 40px;
+    gap: 36px;
     padding: 0 24px;
+  }
+
+  .urbania-showcase {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .urbania-frame {
+    max-width: 400px;
+    height: 240px;
+  }
+
+  .urbania-frame--black {
+    margin-bottom: 20px;
+    margin-top: 0;
+    align-self: flex-end;
+  }
+
+  .urbania-frame--white {
+    margin-top: 20px;
+    margin-bottom: 0;
+    align-self: flex-start;
   }
 }
 
 @media (max-width: 768px) {
   .promo-banner {
-    padding: 50px 0;
+    padding: 48px 0;
   }
 
   .promo-banner__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 28px;
     max-width: 100%;
     padding: 0 16px;
-    align-items: center;
   }
 
   .promo-banner__content {
@@ -134,42 +193,52 @@
   }
 
   .promo-banner__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     letter-spacing: 1px;
   }
 
   .promo-banner__subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 16px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 
   .promo-banner__features {
-    gap: 8px;
+    gap: 10px;
   }
 
   .promo-banner__features li {
-    font-size: 0.8rem;
-    gap: 8px;
+    font-size: 0.85rem;
+    gap: 10px;
   }
 
   .promo-banner__features svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 
-  .promo-banner__image {
-    order: 0;
-    justify-content: flex-end;
+  .urbania-showcase {
+    gap: 16px;
+    align-items: center;
   }
 
-  .promo-banner__image img {
+  .urbania-frame {
     max-width: 100%;
-    width: auto;
-    max-height: 180px;
-    border-radius: 0;
-    box-shadow: none;
-    object-fit: contain;
-    background: transparent;
+    width: 85%;
+    height: 220px;
+    padding: 10px;
+    border-width: 1.5px;
+  }
+
+  .urbania-frame--black {
+    margin-bottom: 16px;
+    margin-top: 0;
+    align-self: flex-start;
+  }
+
+  .urbania-frame--white {
+    margin-top: 16px;
+    margin-bottom: 0;
+    align-self: flex-end;
   }
 
   .promo-banner__cta {
@@ -189,28 +258,86 @@
   }
 
   .promo-banner__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 24px;
     padding: 0 12px;
   }
 
   .promo-banner__title {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     letter-spacing: 0.5px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .promo-banner__subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+
+  .promo-banner__features {
+    gap: 8px;
+  }
+
+  .promo-banner__features li {
+    font-size: 0.78rem;
+    gap: 8px;
+  }
+
+  .promo-banner__features svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .urbania-showcase {
+    gap: 14px;
+    align-items: center;
+  }
+
+  .urbania-frame {
+    width: 90%;
+    height: 200px;
+    padding: 8px;
+    border-width: 1.5px;
+  }
+
+  .urbania-frame--black {
+    margin-bottom: 14px;
+    margin-top: 0;
+    align-self: flex-start;
+  }
+
+  .urbania-frame--white {
+    margin-top: 14px;
+    margin-bottom: 0;
+    align-self: flex-end;
+  }
+
+  .promo-banner__cta {
+    margin-top: 16px;
+  }
+
+  .promo-banner__btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .promo-banner__grid {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .promo-banner__title {
+    font-size: 1.2rem;
   }
 
   .promo-banner__subtitle {
     font-size: 0.78rem;
-    margin-bottom: 12px;
-  }
-
-  .promo-banner__features {
-    gap: 6px;
+    margin-bottom: 14px;
   }
 
   .promo-banner__features li {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     gap: 6px;
   }
 
@@ -219,49 +346,28 @@
     height: 14px;
   }
 
-  .promo-banner__image img {
-    max-height: 140px;
-    border-radius: 0;
-    box-shadow: none;
-    object-fit: contain;
-    background: transparent;
+  .urbania-showcase {
+    gap: 12px;
+    align-items: center;
   }
 
-  .promo-banner__cta {
-    margin-top: 14px;
+  .urbania-frame {
+    width: 94%;
+    height: 180px;
+    padding: 7px;
+    border-width: 1.5px;
   }
 
-  .promo-banner__btn {
-    padding: 8px 16px;
-    font-size: 0.78rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .promo-banner__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 0 10px;
+  .urbania-frame--black {
+    margin-bottom: 12px;
+    margin-top: 0;
+    align-self: flex-start;
   }
 
-  .promo-banner__title {
-    font-size: 1.1rem;
-  }
-
-  .promo-banner__subtitle {
-    font-size: 0.72rem;
-  }
-
-  .promo-banner__features li {
-    font-size: 0.65rem;
-  }
-
-  .promo-banner__image img {
-    max-height: 120px;
-    border-radius: 0;
-    box-shadow: none;
-    object-fit: contain;
-    background: transparent;
+  .urbania-frame--white {
+    margin-top: 12px;
+    margin-bottom: 0;
+    align-self: flex-end;
   }
 
   .promo-banner__btn {

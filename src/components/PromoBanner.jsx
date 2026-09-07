@@ -51,10 +51,20 @@ export default function PromoBanner() {
             </ul>
           </div>
           <div className="promo-banner__image">
-            <img
-              src="/images/black-urbania.png"
-              alt="Black Force Urbania"
-            />
+            <div className="urbania-showcase">
+              <div className="urbania-frame urbania-frame--black">
+                <img
+                  src="/images/black-urbania-side.png"
+                  alt="Black Force Urbania"
+                />
+              </div>
+              <div className="urbania-frame urbania-frame--white">
+                <img
+                  src="/images/white-urbania-side.png"
+                  alt="White Force Urbania"
+                />
+              </div>
+            </div>
           </div>
           <div className="promo-banner__cta">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="promo-banner__btn">
