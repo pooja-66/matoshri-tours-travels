@@ -40,11 +40,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero__carousel">
-        <span className="hero__carousel-dot hero__carousel-dot--active"></span>
-        <span className="hero__carousel-dot"></span>
-        <span className="hero__carousel-dot hero__carousel-dot--gray"></span>
-      </div>
     </section>
   );
 }
