@@ -13,6 +13,42 @@ export default function Fleet() {
       </div>
       <section className="section">
         <div className="container">
+          <h2 className="premium-fleet__title">Our Premium Fleet</h2>
+          <div className="premium-fleet__grid">
+            <div className="premium-fleet__card">
+              <div className="premium-fleet__image">
+                <img src="/images/black-urbania-angle.png" alt="Black Force Urbania" loading="eager" />
+              </div>
+              <div className="premium-fleet__content">
+                <h3 className="premium-fleet__name">Force Urbania Premium</h3>
+                <p className="premium-fleet__desc">Premium comfort with stylish design for special occasions</p>
+                <div className="premium-fleet__specs">
+                  <span className="premium-fleet__spec">13 + Driver</span>
+                  <span className="premium-fleet__spec">AC</span>
+                </div>
+                <Link to="/booking" className="btn-primary">Book Now</Link>
+              </div>
+            </div>
+            <div className="premium-fleet__card">
+              <div className="premium-fleet__image">
+                <img src="/images/white-urbania-angle.png" alt="White Force Urbania" loading="eager" />
+              </div>
+              <div className="premium-fleet__content">
+                <h3 className="premium-fleet__name">Force Urbania Classic</h3>
+                <p className="premium-fleet__desc">Classic white Urbania perfect for weddings, pilgrimages, and family trips</p>
+                <div className="premium-fleet__specs">
+                  <span className="premium-fleet__spec">13 + Driver</span>
+                  <span className="premium-fleet__spec">AC</span>
+                </div>
+                <Link to="/booking" className="btn-primary">Book Now</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="fleet-divider">
+            <span>All Vehicles</span>
+          </div>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
             {FLEET.map((vehicle, index) => (
               <div

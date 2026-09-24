@@ -1,0 +1,232 @@
+.about-vehicles {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.about-vehicles__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0B1F33;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.about-vehicles__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-vehicles__card {
+  text-align: center;
+  background: #F8F7F3;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 24px;
+}
+
+.about-vehicles__image {
+  height: 240px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.about-vehicles__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.about-vehicles__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0B1F33;
+  margin: 0 0 8px;
+  padding: 0 16px;
+}
+
+.about-vehicles__desc {
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 16px;
+}
+
+@media (max-width: 900px) {
+  .about-vehicles__grid {
+    gap: 20px;
+  }
+
+  .about-vehicles__image {
+    height: 220px;
+    padding: 20px;
+  }
+
+  .about-vehicles__title {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  .about-vehicles__name {
+    font-size: 1.15rem;
+  }
+
+  .about-vehicles__desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-vehicles {
+    margin-top: 40px;
+  }
+
+  .about-vehicles__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-vehicles__image {
+    height: 260px;
+    padding: 24px;
+  }
+
+  .about-vehicles__title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .about-vehicles__name {
+    font-size: 1.25rem;
+  }
+
+  .about-vehicles__desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-vehicles {
+    margin-top: 32px;
+  }
+
+  .about-vehicles__title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .about-vehicles__image {
+    height: 220px;
+    padding: 16px;
+  }
+
+  .about-vehicles__name {
+    font-size: 1.1rem;
+  }
+
+  .about-vehicles__desc {
+    font-size: 0.9rem;
+  }
+}
+
+.about-stats {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-stats__heading {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #0B1F33;
+  text-align: center;
+}
+
+.about-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.about-stats__card {
+  text-align: center;
+  padding: 32px 20px;
+  background: #F8F7F3;
+  border-radius: 16px;
+}
+
+.about-stats__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #D4A84F;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-stats__label {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .about-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .about-stats__card {
+    padding: 24px 14px;
+  }
+
+  .about-stats__number {
+    font-size: 2rem;
+  }
+
+  .about-stats__label {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-stats__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-stats__card {
+    padding: 28px 24px;
+  }
+
+  .about-stats__number {
+    font-size: 2.2rem;
+  }
+
+  .about-stats__label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-stats__heading {
+    font-size: 1.5rem;
+  }
+
+  .about-stats__card {
+    padding: 24px 20px;
+  }
+
+  .about-stats__number {
+    font-size: 2rem;
+  }
+}

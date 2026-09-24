@@ -216,3 +216,27 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 320px) {
+  .destinations__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .destinations__card {
+    border-radius: 10px;
+  }
+
+  .destinations__title {
+    font-size: 1.1rem;
+  }
+
+  .destinations__name {
+    font-size: 0.9rem;
+  }
+
+  .destinations__info {
+    padding: 14px;
+  }
+}

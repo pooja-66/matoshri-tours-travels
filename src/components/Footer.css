@@ -26,8 +26,8 @@
 }
 
 .footer__logo-image {
-  height: 260px;
-  width: auto;
+  width: 150px;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -284,7 +284,7 @@
   }
 
   .footer__logo-image {
-    height: 220px;
+    width: 135px;
   }
 }
 
@@ -303,13 +303,13 @@
   }
 
   .footer__logo-image {
-    height: 200px;
+    width: 120px;
   }
 }
 
 @media (max-width: 430px) {
   .footer__logo-image {
-    height: 180px;
+    width: 110px;
   }
 }
 

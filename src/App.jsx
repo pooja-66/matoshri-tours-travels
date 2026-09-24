@@ -12,6 +12,7 @@ import PuneToMahabaleshwar from './pages/PuneToMahabaleshwar';
 import Booking from './pages/Booking';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path="/booking" element={<Booking />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
         </PageTransition>

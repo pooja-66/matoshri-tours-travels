@@ -123,6 +123,22 @@ export const FLEET = [
     imageClassName: "fleet-image--contain",
   },
   {
+    name: "Force Urbania Premium",
+    seats: "13 + Driver",
+    image: "/images/black-urbania-angle.png",
+    features: ["AC", "Premium Pushback Seats", "LED Reading Lights", "Charging Points", "Spacious Luggage Boot", "Music System"],
+    suitability: "Premium comfort with excellent mileage and stylish design for special occasions",
+    imageClassName: "fleet-image--contain",
+  },
+  {
+    name: "Force Urbania Classic",
+    seats: "13 + Driver",
+    image: "/images/white-urbania-side.png",
+    features: ["AC", "Comfortable Seats", "LED Lights", "Charging Points", "Large Luggage Space", "Music System"],
+    suitability: "Classic white Urbania perfect for weddings, pilgrimages, and family trips",
+    imageClassName: "fleet-image--contain",
+  },
+  {
     name: "Force Tempo Traveller",
     seats: "10 + Driver",
     image: "/images/force-traveller.png",

@@ -290,7 +290,7 @@
 
 @media (max-width: 1024px) {
   .fleet-showcase__stage {
-    height: 420px;
+    height: 400px;
   }
 
   .fleet-showcase__title {
@@ -300,6 +300,38 @@
   .fleet-showcase__vehicle--prev,
   .fleet-showcase__vehicle--next {
     display: none;
+  }
+
+  .fleet-showcase__vehicle {
+    max-width: 540px;
+  }
+
+  .fleet-showcase__shadow {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .fleet-showcase__stage {
+    height: 380px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .fleet-showcase__vehicle {
+    max-width: 400px;
+  }
+
+  .fleet-showcase__shadow {
+    max-width: 340px;
+  }
+
+  .fleet-showcase__title {
+    font-size: 1.6rem;
+  }
+
+  .fleet-showcase__progress {
+    width: 180px;
   }
 }
 

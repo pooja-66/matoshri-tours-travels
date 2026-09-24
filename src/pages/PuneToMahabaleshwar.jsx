@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { SITE_CONFIG, FLEET, WHY_CHOOSE_US } from '../config';
 import './PuneToMahabaleshwar.css';
 
@@ -79,12 +80,12 @@ export default function PuneToMahabaleshwar() {
             Travel comfortably from Pune to Mahabaleshwar with Matoshri Tours & Travels.
           </p>
           <div className="ptm-hero__actions">
-            <a href="/booking" className="btn-primary ptm-hero__btn">
+            <Link to="/booking" className="btn-primary ptm-hero__btn">
               Book Now
-            </a>
-            <a href="/packages" className="btn-secondary ptm-hero__btn">
+            </Link>
+            <Link to="/packages" className="btn-secondary ptm-hero__btn">
               View Packages
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -179,9 +180,9 @@ export default function PuneToMahabaleshwar() {
           <p className="ptm-cta-text">
             Book your comfortable journey with Matoshri Tours & Travels.
           </p>
-          <a href="/booking" className="btn-primary ptm-cta-btn">
+          <Link to="/booking" className="btn-primary ptm-cta-btn">
             Book Your Journey
-          </a>
+          </Link>
         </div>
       </section>
     </>

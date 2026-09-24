@@ -1,4 +1,210 @@
 /* =========================================================
+   PREMIUM FLEET SECTION
+   ========================================================= */
+
+.premium-fleet__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0B1F33;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.premium-fleet__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.premium-fleet__card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  border: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: column;
+}
+
+.premium-fleet__image {
+  height: 280px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.premium-fleet__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.premium-fleet__content {
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.premium-fleet__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0B1F33;
+  margin: 0;
+}
+
+.premium-fleet__desc {
+  font-size: 0.95rem;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.premium-fleet__specs {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.premium-fleet__spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #0B1F33;
+  font-size: 0.9rem;
+}
+
+.fleet-divider {
+  display: flex;
+  align-items: center;
+  margin: 48px 0 32px;
+  gap: 16px;
+}
+
+.fleet-divider::before,
+.fleet-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E5E7EB;
+}
+
+.fleet-divider span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .premium-fleet__grid {
+    gap: 20px;
+  }
+
+  .premium-fleet__image {
+    height: 240px;
+    padding: 20px;
+  }
+
+  .premium-fleet__name {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-fleet__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .premium-fleet__image {
+    height: 200px;
+    padding: 16px;
+  }
+
+  .premium-fleet__content {
+    padding: 18px;
+  }
+
+  .premium-fleet__name {
+    font-size: 1.1rem;
+  }
+
+  .premium-fleet__desc {
+    font-size: 0.85rem;
+  }
+
+  .premium-fleet__specs {
+    gap: 10px;
+  }
+
+  .premium-fleet__spec {
+    font-size: 0.8rem;
+  }
+
+  .premium-fleet__title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .fleet-divider {
+    margin: 36px 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .premium-fleet__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .premium-fleet__image {
+    height: 260px;
+  }
+
+  .premium-fleet__name {
+    font-size: 1.3rem;
+  }
+
+  .premium-fleet__desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-fleet__image {
+    height: 220px;
+    padding: 16px;
+  }
+
+  .premium-fleet__content {
+    padding: 16px;
+  }
+
+  .premium-fleet__name {
+    font-size: 1.15rem;
+  }
+
+  .premium-fleet__title {
+    font-size: 1.4rem;
+  }
+
+  .fleet-divider span {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
    FLEET PAGE — Responsive Vehicle Cards
    ========================================================= */
 
@@ -9,7 +215,43 @@
 
 @media (max-width: 768px) {
   .page-header.fleet-page-header {
-    padding: 60px 0 40px;
+    padding: 100px 0 60px;
+  }
+
+  .page-header.fleet-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header.fleet-page-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .page-header.fleet-page-header {
+    padding: 84px 0 50px;
+  }
+
+  .page-header.fleet-page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .page-header.fleet-page-header p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .page-header.fleet-page-header {
+    padding: 78px 0 50px;
+  }
+
+  .page-header.fleet-page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-header.fleet-page-header p {
+    font-size: 0.85rem;
   }
 }
 
@@ -31,6 +273,26 @@
   }
 }
 
+@media (max-width: 900px) {
+  .fleet-card__grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .fleet-card__image {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+
+  .fleet-card__content {
+    padding: 28px !important;
+  }
+
+  .fleet-image--contain {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .fleet-card__grid {
     grid-template-columns: 1fr 1fr !important;
@@ -43,10 +305,27 @@
 
   .fleet-card__image {
     min-height: 220px !important;
+    height: 220px !important;
   }
 
   .fleet-image--contain {
     padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fleet-card__grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .fleet-card__image {
+    height: 260px !important;
+    min-height: 260px !important;
+  }
+
+  .fleet-card__content {
+    padding: 24px !important;
   }
 }
 

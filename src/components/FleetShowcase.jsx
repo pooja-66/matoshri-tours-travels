@@ -9,6 +9,12 @@ const FLEET_SHOWCASE = [
     alt: "Black Force Urbania"
   },
   {
+    image: "/images/white-urbania-angle.png",
+    name: "Force Urbania",
+    category: "Premium Group Travel",
+    alt: "White Force Urbania"
+  },
+  {
     image: "/images/force-traveller.png",
     name: "Force Traveller",
     category: "Comfortable Group Travel",

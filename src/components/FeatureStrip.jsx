@@ -26,8 +26,7 @@ const icons = {
   ),
   pricing: (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <line x1="12" y1="1" x2="12" y2="23"/>
-      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      <text x="4" y="18" fontSize="18" fontWeight="700" fill="currentColor" stroke="none" fontFamily="Inter, sans-serif">₹</text>
     </svg>
   ),
   support: (

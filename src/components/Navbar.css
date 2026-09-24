@@ -226,20 +226,36 @@
 
 @media (min-width: 1025px) {
   .navbar__container {
-    gap: 44px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .navbar__logo {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar__controls {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .navbar__desktop-links {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 1;
-    justify-content: flex-start;
+    gap: 6px;
+    flex: none;
+    justify-content: center;
   }
 
   .navbar__link {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     white-space: nowrap;
+    flex-shrink: 1;
   }
 
   .navbar__hamburger {

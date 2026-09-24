@@ -241,7 +241,7 @@
     min-height: auto;
 
     /* Navbar is still accounted for */
-    margin-top: 70px;
+    margin-top: 88px;
 
     padding-top: 0;
 
@@ -260,7 +260,7 @@
     text-align: left;
     align-items: flex-start;
 
-    max-width: 55%;
+    max-width: 65%;
   }
 
   .hero__title {
@@ -290,7 +290,7 @@
 
 @media (max-width: 430px) {
   .hero {
-    margin-top: 60px;
+    margin-top: 74px;
 
     padding-top: 0;
 
@@ -305,7 +305,7 @@
     text-align: left;
     align-items: flex-start;
 
-    max-width: 58%;
+    max-width: 70%;
   }
 
   .hero__script {
@@ -351,7 +351,7 @@
 
 @media (max-width: 375px) {
   .hero {
-    margin-top: 60px;
+    margin-top: 68px;
 
     background-position: 68% center;
   }
@@ -361,7 +361,7 @@
   }
 
   .hero__text {
-    max-width: 60%;
+    max-width: 75%;
 
     text-align: left;
     align-items: flex-start;
@@ -393,5 +393,29 @@
     height: 40px;
 
     font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    margin-top: 64px;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 1.3rem;
+  }
+
+  .hero__btn,
+  .hero__btn-secondary {
+    min-width: 120px;
+    max-width: 150px;
+
+    height: 38px;
+
+    font-size: 0.75rem;
   }
 }

@@ -26,11 +26,11 @@ export default function PageTransition({ children }) {
     }, 350);
     const t2 = setTimeout(() => {
       setPhase('exiting');
-    }, 1800);
+    }, 2400);
     const t3 = setTimeout(() => {
       setIsAnimating(false);
       setPhase('idle');
-    }, 2500);
+    }, 2900);
 
     timersRef.current = [t1, t2, t3];
 
