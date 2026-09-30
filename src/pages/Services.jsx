@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SERVICES, SITE_CONFIG } from '../config';
 import './Services.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 const serviceDetails = [
   {
@@ -46,6 +47,7 @@ export default function Services() {
 
   return (
     <>
+      <SEO {...SITE_SEO.services} />
       <div className="page-header">
         <div className="container">
           <h1>Our Services</h1>

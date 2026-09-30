@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { galleryImages, galleryVideos } from '../config';
 import './Gallery.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 const FILTERS = ['ALL', 'IMAGES', 'VIDEOS'];
 
@@ -66,6 +67,7 @@ export default function Gallery() {
 
   return (
     <>
+      <SEO {...SITE_SEO.gallery} />
       <div className="page-header">
         <div className="container">
           <h1>Gallery</h1>

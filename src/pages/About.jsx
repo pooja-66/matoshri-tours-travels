@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './About.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 function AnimatedNumber({ target, suffix = '' }) {
   const [count, setCount] = useState(0);
@@ -52,6 +53,7 @@ function AnimatedNumber({ target, suffix = '' }) {
 export default function About() {
   return (
     <>
+      <SEO {...SITE_SEO.about} />
       <div className="page-header">
         <div className="container">
           <h1>About Us</h1>

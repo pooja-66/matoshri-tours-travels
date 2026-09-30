@@ -1,5 +1,6 @@
 import { FLEET, SITE_CONFIG } from '../config';
 import './Booking.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 export default function Booking() {
   const handleBookNow = (vehicleName) => {
@@ -10,6 +11,7 @@ export default function Booking() {
 
   return (
     <>
+      <SEO {...SITE_SEO.booking} />
       <div className="page-header booking-page-header">
         <div className="container">
           <h1>Online Booking</h1>

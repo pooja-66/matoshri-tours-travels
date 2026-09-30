@@ -1,5 +1,6 @@
 import { SITE_CONFIG } from '../config';
 import './Packages.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 const whatsappBase = `https://wa.me/${SITE_CONFIG.whatsappNumber}`;
 
@@ -104,6 +105,7 @@ const RULES = [
 export default function Packages() {
   return (
     <>
+      <SEO {...SITE_SEO.packages} />
       <div className="page-header">
         <div className="container">
           <h1>Tour Packages</h1>

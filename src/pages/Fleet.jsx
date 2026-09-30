@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { FLEET, SITE_CONFIG } from '../config';
 import './Fleet.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 export default function Fleet() {
   return (
     <>
+      <SEO {...SITE_SEO.fleet} />
       <div className="page-header fleet-page-header">
         <div className="container">
           <h1>Our Fleet</h1>

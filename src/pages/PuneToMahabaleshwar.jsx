@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG, FLEET, WHY_CHOOSE_US } from '../config';
 import './PuneToMahabaleshwar.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 const whatsappLink = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Hi%20Matoshri%20Tours%20%26%20Travels%2C%20I%20am%20interested%20in%20Pune%20to%20Mahabaleshwar%20travel.`;
 
@@ -63,15 +64,9 @@ const highlights = [
 ];
 
 export default function PuneToMahabaleshwar() {
-  useEffect(() => {
-    document.title = 'Pune To Mahabaleshwar | Matoshri Tours & Travels';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Book comfortable Pune to Mahabaleshwar travel with Matoshri Tours & Travels. Premium Force Urbania, experienced drivers, one-way & round-trip options.');
-    }
-  }, []);
   return (
     <>
+      <SEO {...SITE_SEO.puneToMahabaleshwar} />
       <section className="ptm-hero">
         <div className="container ptm-hero__content">
           <span className="ptm-hero__script"></span>

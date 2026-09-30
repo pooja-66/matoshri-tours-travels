@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SITE_CONFIG, CALL_NUMBERS } from '../config';
 import './Contact.css';
+import SEO, { SITE_SEO } from '../components/SEO';
 
 export default function Contact() {
   const mapSrc = SITE_CONFIG.mapEmbed;
@@ -67,6 +68,7 @@ export default function Contact() {
 
   return (
     <>
+      <SEO {...SITE_SEO.contact} />
       <div className="page-header">
         <div className="container">
           <h1>Contact Us</h1>
