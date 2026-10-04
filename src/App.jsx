@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ServiceDetail from './pages/services/ServiceDetail';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContactButtons from './components/FloatingContactButtons';
@@ -27,6 +28,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/fleet" element={<Fleet />} />
               <Route path="/packages" element={<Packages />} />
               <Route path="/pune-to-mahabaleshwar" element={<PuneToMahabaleshwar />} />

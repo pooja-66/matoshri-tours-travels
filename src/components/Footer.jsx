@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG, NAV_LINKS, SOCIAL, CALL_NUMBERS } from '../config';
+import { FOOTER_SERVICES } from '../data/servicePages';
 import './Footer.css';
 
 export default function Footer() {
@@ -156,47 +157,47 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="footer__links-section">
-            <h4 className="footer__heading">Services</h4>
-            <ul className="footer__links">
-              <li><Link to="/services">Force Urbania on Rent</Link></li>
-              <li><Link to="/services">Airport Transfers</Link></li>
-              <li><Link to="/services">Outstation Travel</Link></li>
-              <li><Link to="/services">Corporate Travel</Link></li>
-              <li><Link to="/services">Wedding Transportation</Link></li>
-            </ul>
+           <div className="footer__contact">
+             <h4 className="footer__heading">Contact Us</h4>
+             <div className="footer__contact-item">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+               </svg>
+               <div className="footer__contact-numbers">
+                 {CALL_NUMBERS.map((item) => (
+                   <a key={item.tel} href={item.tel} className="footer__contact-number">{item.label}</a>
+                 ))}
+               </div>
+             </div>
+             <div className="footer__contact-item">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                 <polyline points="22,6 12,13 2,6" />
+               </svg>
+               <a href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
+             </div>
+             <div className="footer__contact-item">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                 <circle cx="12" cy="10" r="3" />
+               </svg>
+               <span>{SITE_CONFIG.address}</span>
+             </div>
+           </div>
+         </div>
+
+         <div className="footer__services-section footer__services-section--full">
+           <h4 className="footer__heading">Our Services</h4>
+           <ul className="footer__links footer__services-grid">
+             {FOOTER_SERVICES.map((service) => (
+               <li key={service.slug} className="footer__service-item">
+                 <Link to={`/services/${service.slug}`}>{service.name}</Link>
+               </li>
+             ))}
+           </ul>
           </div>
 
-          <div className="footer__contact">
-            <h4 className="footer__heading">Contact Us</h4>
-            <div className="footer__contact-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <div className="footer__contact-numbers">
-                {CALL_NUMBERS.map((item) => (
-                  <a key={item.tel} href={item.tel} className="footer__contact-number">{item.label}</a>
-                ))}
-              </div>
-            </div>
-            <div className="footer__contact-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <a href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
-            </div>
-            <div className="footer__contact-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span>{SITE_CONFIG.address}</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer__bottom">
+         <div className="footer__bottom">
           <p>&copy; {new Date().getFullYear()} Matoshri Tours & Travels. All rights reserved.</p>
         </div>
       </div>
