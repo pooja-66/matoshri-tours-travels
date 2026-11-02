@@ -239,7 +239,9 @@ export const galleryImages = [
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.32.06 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.32.06 PM" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.32.05 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.32.05 PM" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.32.02 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.32.02 PM" },
+  { src: "/images/gallery/photos/gallery-new-2.jpg", alt: "Gallery New Image 2" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.32.00 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.32.00 PM" },
+  { src: "/images/gallery/photos/gallery-new-1.jpg", alt: "Gallery New Image 1" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.31.54 PM (1).jpeg", alt: "WhatsApp Image 2026-09-01 at 6.31.54 PM (1)" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.31.48 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.31.48 PM" },
   { src: "/images/gallery/photos/WhatsApp Image 2026-09-01 at 6.31.42 PM.jpeg", alt: "WhatsApp Image 2026-09-01 at 6.31.42 PM" },
@@ -270,9 +272,22 @@ export const galleryImages = [
   { src: "/images/gallery/photos/30dc936b-b8ae-4815-bba2-306d0b645a82.jpg", alt: "30dc936b-b8ae-4815-bba2-306d0b645a82" },
   { src: "/images/gallery/photos/10e0bc1e-83a6-4a27-b5dc-e0f14a71796f.jpg", alt: "10e0bc1e-83a6-4a27-b5dc-e0f14a71796f" },
   { src: "/images/gallery/photos/0bf3363f-6a35-4150-9e58-712c27b4bc05.jpg", alt: "0bf3363f-6a35-4150-9e58-712c27b4bc05" },
+  { src: "/images/gallery/photos/WhatsApp Image 2026-10-29 at 10.05.33 AM.jpeg", alt: "Matoshri Tours Gallery" },
+  { src: "/images/gallery/photos/WhatsApp Image 2026-10-29 at 9.54.54 AM.jpeg", alt: "Matoshri Tours Gallery" },
+  { src: "/images/gallery/photos/gallery-new-1.jpg", alt: "Gallery New Image 1" },
+  { src: "/images/gallery/photos/gallery-new-2.jpg", alt: "Gallery New Image 2" },
 ];
 
 export const galleryVideos = [
-  { src: "/images/gallery/videos/WhatsApp Video 2026-09-01 at 6.45.45 PM.mp4", alt: "WhatsApp Video 2026-09-01 at 6.45.45 PM" },
   { src: "/images/gallery/videos/WhatsApp Video 2026-09-01 at 6.45.38 PM.mp4", alt: "WhatsApp Video 2026-09-01 at 6.45.38 PM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-09-01 at 6.45.45 PM.mp4", alt: "WhatsApp Video 2026-09-01 at 6.45.45 PM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 1.58.19 PM.mp4", alt: "WhatsApp Video 2026-10-29 at 1.58.19 PM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 1.59.01 PM.mp4", alt: "WhatsApp Video 2026-10-29 at 1.59.01 PM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.42 AM.mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.42 AM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.43 AM.mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.43 AM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.45 AM.mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.45 AM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.48 AM.mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.48 AM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.59 AM (1).mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.59 AM (1)" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 10.10.59 AM.mp4", alt: "WhatsApp Video 2026-10-29 at 10.10.59 AM" },
+  { src: "/images/gallery/videos/WhatsApp Video 2026-10-29 at 2.00.59 PM.mp4", alt: "WhatsApp Video 2026-10-29 at 2.00.59 PM" },
 ];

@@ -117,12 +117,16 @@ export default function Gallery() {
                 className="gallery-card gallery-card--video"
                 onClick={() => openVideoModal(video.src)}
               >
-                <div className="gallery-card__video-placeholder">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3"/>
-                  </svg>
-                  <span>Play Video</span>
-                </div>
+                <video
+                  src={video.src}
+                  className="gallery-card__video"
+                  muted
+                  playsInline
+                  preload="metadata"
+                  onMouseOver={(e) => e.currentTarget.play().catch(() => {})}
+                  onMouseOut={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                  onTouchStart={(e) => e.currentTarget.play().catch(() => {})}
+                />
                 <div className="gallery-card__overlay gallery-card__overlay--video">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="5 3 19 12 5 21 5 3"/>

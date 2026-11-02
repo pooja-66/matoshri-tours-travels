@@ -99,37 +99,26 @@
 }
 
 .gallery-card--video {
-  background: linear-gradient(135deg, #0B1F33 0%, #12395B 100%);
+  background: #000;
+}
+
+.gallery-card__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-card__video-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.gallery-card__video-placeholder svg {
-  width: 48px;
-  height: 48px;
-  color: #D4A84F;
+  display: none;
 }
 
 .gallery-card__overlay--video {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .gallery-card--video:hover .gallery-card__overlay--video {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Lightbox */
